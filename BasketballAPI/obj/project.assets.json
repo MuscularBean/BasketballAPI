@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "dotenv.net/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/dotenv.net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/dotenv.net.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.19.4": {
         "type": "package",
         "build": {
@@ -25,6 +34,21 @@
     }
   },
   "libraries": {
+    "dotenv.net/3.2.0": {
+      "sha512": "shohkuZ2HxhNmLY+jCG5MJreMEtmjbaWyOIoJ920KTDwJHT9JC7WdnmrXCwqJ1JPKo5QY9oDJUEFTlQE8qSZSw==",
+      "type": "package",
+      "path": "dotenv.net/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "dotenv.net.3.2.0.nupkg.sha512",
+        "dotenv.net.nuspec",
+        "lib/netstandard1.6/dotenv.net.dll",
+        "lib/netstandard2.0/dotenv.net.dll",
+        "lib/netstandard2.1/dotenv.net.dll"
+      ]
+    },
     "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.19.4": {
       "sha512": "aKxpRAUIxDrnSnyr7xJWGixOBgsB7Z4oHpWRkpRzzq04kfze4mN7944gRc4X9H2U5KG3A/btF74kavkO8KXqCg==",
       "type": "package",
@@ -140,7 +164,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.4",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "dotenv.net >= 3.2.0"
     ]
   },
   "packageFolders": {
@@ -189,6 +214,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "dotenv.net": {
+            "target": "Package",
+            "version": "[3.2.0, )"
           }
         },
         "imports": [
