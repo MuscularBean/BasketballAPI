@@ -9,10 +9,12 @@ namespace BasketballAPI.Controllers
     public class BasketballController : Controller
     {
         private readonly HttpClient _client;
+        private readonly string _apiKey;
 
         public BasketballController(HttpClient client)
         {
             _client = client;
+            _apiKey = Environment.GetEnvironmentVariable("API_KEY");
         }
 
         public async Task<IActionResult> Index(string season, string team_name)
@@ -22,7 +24,7 @@ namespace BasketballAPI.Controllers
                 return View(new List<PlayerInfo>());
             }
             
-            var URL = $"https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStatsByTeam/{season}/{team_name}?key=25ae768b66674ac785301051450291af";
+            var URL = $"https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStatsByTeam/{season}/{team_name}?key={_apiKey}";
             var response = await _client.GetStringAsync(URL);
 
             if (string.IsNullOrEmpty(response))
