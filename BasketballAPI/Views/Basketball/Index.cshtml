@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BasketballAPI.Models.PlayerInfo>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Player Statistics</title>
+</head>
+<body>
+	<h1>Player Statistics</h1>
+	<form asp-action="Index" method="get">
+		<label for="season">Season:</label>
+		<input type="text" id="season" name="season" required>
+		<label for="team_name">Team Name:</label>
+		<input type="text" id="team_name" name="team_name" required>
+		<button type="submit">Get Player Statistics</button>
+	</form>
+
+	<p>Please visit the
+		<a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations">WikiProject National Basketball Association team abbreviations</a>
+		and select a team to view stats!
+	</p>
+	@if (Model != null)
+	{
+		/* <img src "@Model.First().TeamLogoUrl" alt="Team Logo" class="team-logo" /> */
+		<div style="overflow-x:auto">
+		<table class="user-table">
+			<thread>
+				<tr>
+					<th class="color-font">Name</th>
+					<th class=" color-font">Position</th>
+					<th class=" color-font">Two Pointers Made</th>
+					<th class=" color-font">Three Pointers Made</th>
+					<th class=" color-font">Assists</th>
+					<th class=" color-font">Rebounds</th>
+					<th class=" color-font">Steals</th>
+					<th class=" color-font">Turnovers</th>
+					<th class=" color-font">Points</th>
+					<th class=" color-font">Games</th>
+				</tr>
+			</thread>
+			<tbody>
+				@foreach (var player in Model)
+				{
+					<tr>
+						<td class="color-font" data-label="Name">@player.Name</td>
+						<td class="color-font" data-label="Position">@player.Position</td>
+						<td class="color-font" data-label="Two Pointers Made">@player.TwoPointersMade</td>
+						<td class="color-font" data-label="Three Pointers Made">@player.ThreePointersMade</td>
+						<td class="color-font" data-label="Assists">@player.Assists</td>
+						<td class="color-font" data-label="Rebounds">@player.Rebounds</td>
+						<td class="color-font" data-label="Steals">@player.Steals</td>
+						<td class="color-font" data-label="Turnovers">@player.Turnovers</td>
+						<td class="color-font" data-label="Points">@player.Points</td>
+						<td class="color-font" data-label="Games">@player.Games</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		</div>
+
+	}
+	else
+	{
+		<p> No data available. Please enter a season and team name to view stats.</p>
+	}
+</body>
+</html>
+
+<style>
+	table,th,td
+	{
+		border: 1px solid white;
+		border-collapse: collapse;
+	}
+	.user-table
+	{
+
+	}
+	html,div,body
+	{
+		background-color: #DDBBA2;
+	}
+	.color-font
+	{
+		color: #00754B;
+	}
+</style>
