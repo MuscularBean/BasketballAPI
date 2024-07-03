@@ -1,4 +1,10 @@
+using dotenv.net;
+
 var builder = WebApplication.CreateBuilder(args);
+
+DotEnv.Load();
+
+var apiKey = Environment.GetEnvironmentVariable("API_KEY");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -31,3 +31,4 @@ C:\Users\jacob\source\repos\BasketballAPI\BasketballAPI\obj\Debug\net6.0\refint\
 C:\Users\jacob\source\repos\BasketballAPI\BasketballAPI\obj\Debug\net6.0\BasketballAPI.pdb
 C:\Users\jacob\source\repos\BasketballAPI\BasketballAPI\obj\Debug\net6.0\BasketballAPI.genruntimeconfig.cache
 C:\Users\jacob\source\repos\BasketballAPI\BasketballAPI\obj\Debug\net6.0\ref\BasketballAPI.dll
+C:\Users\jacob\source\repos\BasketballAPI\BasketballAPI\bin\Debug\net6.0\dotenv.net.dll
