@@ -28,32 +28,32 @@
 		<table class="user-table">
 			<thread>
 				<tr>
-					<th class="color-font">Name</th>
-					<th class=" color-font">Position</th>
-					<th class=" color-font">Two Pointers Made</th>
-					<th class=" color-font">Three Pointers Made</th>
-					<th class=" color-font">Assists</th>
-					<th class=" color-font">Rebounds</th>
-					<th class=" color-font">Steals</th>
-					<th class=" color-font">Turnovers</th>
-					<th class=" color-font">Points</th>
-					<th class=" color-font">Games</th>
+					<th class="color-font"> Name </th>
+					<th class="color-font"> Position </th>
+					<th class="color-font"> Two Pointers Made </th>
+					<th class="color-font"> Three Pointers Made </th>
+					<th class="color-font"> Assists </th>
+					<th class="color-font"> Rebounds </th>
+					<th class="color-font"> Steals </th>
+					<th class="color-font"> Turnovers </th>
+					<th class="color-font"> Points </th>
+					<th class="color-font"> Games </th>
 				</tr>
 			</thread>
 			<tbody>
 				@foreach (var player in Model)
 				{
 					<tr>
-						<td class="color-font" data-label="Name">@player.Name</td>
-						<td class="color-font" data-label="Position">@player.Position</td>
-						<td class="color-font" data-label="Two Pointers Made">@player.TwoPointersMade</td>
-						<td class="color-font" data-label="Three Pointers Made">@player.ThreePointersMade</td>
-						<td class="color-font" data-label="Assists">@player.Assists</td>
-						<td class="color-font" data-label="Rebounds">@player.Rebounds</td>
-						<td class="color-font" data-label="Steals">@player.Steals</td>
-						<td class="color-font" data-label="Turnovers">@player.Turnovers</td>
-						<td class="color-font" data-label="Points">@player.Points</td>
-						<td class="color-font" data-label="Games">@player.Games</td>
+						<td class="color-font" data-label=" Name ">@player.Name</td>
+						<td class="color-font" data-label=" Position ">@player.Position</td>
+						<td class="color-font" data-label=" Two Pointers Made ">@player.TwoPointersMade</td>
+						<td class="color-font" data-label=" Three Pointers Made ">@player.ThreePointersMade</td>
+						<td class="color-font" data-label=" Assists ">@player.Assists</td>
+						<td class="color-font" data-label=" Rebounds ">@player.Rebounds</td>
+						<td class="color-font" data-label=" Steals ">@player.Steals</td>
+						<td class="color-font" data-label=" Turnovers ">@player.Turnovers</td>
+						<td class="color-font" data-label=" Points ">@player.Points</td>
+						<td class="color-font" data-label=" Games ">@player.Games</td>
 					</tr>
 				}
 			</tbody>
@@ -71,19 +71,23 @@
 <style>
 	table,th,td
 	{
-		border: 1px solid white;
+		border: 1px solid black;
 		border-collapse: collapse;
 	}
 	.user-table
 	{
 
 	}
-	html,div,body
+	html,div,body,header,base
 	{
 		background-color: #DDBBA2;
 	}
+	nav 
+	{
+		border-bottom: 1px solid black;
+	}
 	.color-font
 	{
-		color: #00754B;
+		color: #2F4858;
 	}
 </style>

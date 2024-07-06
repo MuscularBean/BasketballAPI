@@ -42,17 +42,17 @@ namespace BasketballAPI.Controllers
             {
                 PlayerInfo playerInfo = new PlayerInfo
                 {
-                    Name = player["Name"].ToString(),
-                    Position = player["Position"].ToString(),
+                    Name = player[" Name "].ToString(),
+                    Position = player[" Position "].ToString(),
 
-                    TwoPointersMade = player["TwoPointersMade"].Value<double>(),
-                    ThreePointersMade = player["ThreePointersMade"].Value<double>(),
-                    Assists = player["Assists"].Value<double>(),
-                    Rebounds = player["Rebounds"].Value<double>(),
-                    Steals = player["Steals"].Value<double>(),
-                    Turnovers = player["Turnovers"].Value<double>(),
-                    Points = player["Points"].Value<double>(),
-                    Games = player["Games"].Value<double>(),
+                    TwoPointersMade = player[" TwoPointersMade "].Value<double>(),
+                    ThreePointersMade = player[" ThreePointersMade "].Value<double>(),
+                    Assists = player[" Assists "].Value<double>(),
+                    Rebounds = player[" Rebounds "].Value<double>(),
+                    Steals = player[" Steals "].Value<double>(),
+                    Turnovers = player[" Turnovers "].Value<double>(),
+                    Points = player[" Points "].Value<double>(),
+                    Games = player[" Games "].Value<double>(),
                    /* TeamLogoUrl = teamLogoUrl */
                 };
 
