@@ -8,15 +8,15 @@
 	<title>Player Statistics</title>
 </head>
 <body>
-	<h1>Player Statistics</h1>
+	<h1>Player Statistics</h1> 
 	<form asp-action="Index" method="get">
 		<label for="season">Season:</label>
 		<input type="text" id="season" name="season" required>
 		<label for="team_name">Team Name:</label>
-		<input type="text" id="team_name" name="team_name" required>
+		<input type="text" id="team_code" name="team_code" required>
 		<button type="submit">Get Player Statistics</button>
 	</form>
-
+	 
 	<p>Please visit the
 		<a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations">WikiProject National Basketball Association team abbreviations</a>
 		and select a team to view stats!
@@ -37,23 +37,21 @@
 					<th class="color-font"> Steals </th>
 					<th class="color-font"> Turnovers </th>
 					<th class="color-font"> Points </th>
-					<th class="color-font"> Games </th>
 				</tr>
 			</thread>
 			<tbody>
 				@foreach (var player in Model)
 				{
 					<tr>
-						<td class="color-font" data-label=" Name ">@player.Name</td>
-						<td class="color-font" data-label=" Position ">@player.Position</td>
-						<td class="color-font" data-label=" Two Pointers Made ">@player.TwoPointersMade</td>
-						<td class="color-font" data-label=" Three Pointers Made ">@player.ThreePointersMade</td>
-						<td class="color-font" data-label=" Assists ">@player.Assists</td>
-						<td class="color-font" data-label=" Rebounds ">@player.Rebounds</td>
-						<td class="color-font" data-label=" Steals ">@player.Steals</td>
-						<td class="color-font" data-label=" Turnovers ">@player.Turnovers</td>
-						<td class="color-font" data-label=" Points ">@player.Points</td>
-						<td class="color-font" data-label=" Games ">@player.Games</td>
+						<td class="color-font" data-label="Name">@player.Name</td>
+						<td class="color-font" data-label="Position">@player.Position</td>
+						<td class="color-font" data-label="Two Pointers Made">@player.TwoPointersMade</td>
+						<td class="color-font" data-label="Three Pointers Made">@player.ThreePointersMade</td>
+						<td class="color-font" data-label="Assists">@player.Assists</td>
+						<td class="color-font" data-label="Rebounds">@player.Rebounds</td>
+						<td class="color-font" data-label="Steals">@player.Steals</td>
+						<td class="color-font" data-label="Turnovers">@player.Turnovers</td>
+						<td class="color-font" data-label="Points">@player.Points</td>
 					</tr>
 				}
 			</tbody>

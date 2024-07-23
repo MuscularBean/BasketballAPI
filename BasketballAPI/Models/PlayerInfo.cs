@@ -11,8 +11,6 @@
         public double Steals { get; set; }
         public double Turnovers { get; set; }
         public double Points { get; set; }
-        public double Games { get; set; }
-      /*  public string TeamLogoUrl {  get; set; } */
 
     }
 }
